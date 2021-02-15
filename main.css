@@ -1,0 +1,21 @@
+.arr-body {
+/* border: 1px solid orange;    */
+display: flex;
+flex-direction: row;
+padding: 2px;
+}
+
+.arr-row {
+
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+}
+
+.arr-elem {
+    align-self: stretch;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid blue;
+    
+}
