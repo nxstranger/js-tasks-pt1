@@ -25,4 +25,5 @@ function strCompare(stringArr) {
   }
 }
 let somearr = ["asd", "afffd", "cc", "kk", 123,423432,"312321 ", " 1232133", " 12ggergregre3"]
+console.log(somearr)
 console.log(strCompare(somearr))

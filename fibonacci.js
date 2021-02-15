@@ -28,12 +28,14 @@ function fibArr(fibLength, bigvalues=false) {
   }
   return arr
 }
+
 // console.log(fibArr(""))
 // console.log(fibArr(-1))
 // console.log(fibArr({}))
 // console.log(fibArr(null))
 // console.log(fibArr(undefined))
-for ( let i = 0; i < 10; i++){
-  console.log(fibArr(i))
-}
-// console.log(fibArr(38))
+
+// for ( let i = 0; i < 10; i++){
+//   console.log(fibArr(i))
+// }
+console.log(fibArr(+prompt('enter length of fibbonaci sequence', 4)))

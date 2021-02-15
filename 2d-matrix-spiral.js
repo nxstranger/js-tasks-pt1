@@ -1,10 +1,17 @@
 "use strict";
 
+// Написать функцию, которая принимает целочисленный number
+// и рисует спиральную матрицу NxN, где N - входной параметр.
+
+// matrix(3)
+// 1 2 3
+// 8 9 4
+// 7 6 5
+
 function spiralMartix(n) {
   const arr = [];
-  
-
   let counter = 1;
+
   let rowMin = 0;
   let rowMax = n - 1;
   let colMin = 0;
@@ -46,7 +53,6 @@ function show2DArray(array2D){
     return false
   }
 
-
   let arrBody = document.createElement('div');
   arrBody.id = "arr-body"
   arrBody.className = "arr-body"
@@ -73,6 +79,7 @@ function show2DArray(array2D){
 }
 
 // show2DArray([[1,4],[2,4]]);
+
 let dimension = prompt('enter the length of array', "4")
 if (dimension > 100){
   alert('to big dimension \n please enter value < 100')
