@@ -3,6 +3,10 @@
 function calcFibArray(len){
     let arr = [0,1]
 
+    if (typeof(len) != 'number' || len < 0){
+        return "Input error!"
+    }
+
     function fib(index){
         if (!(len <= arr.length)) {
             let elem = arr[arr.length-1] + arr[arr.length-2] 
@@ -15,6 +19,10 @@ function calcFibArray(len){
     return fib(len);
 }
 
+
+// console.log(calcFibArray(null));
+// console.log(calcFibArray(-1));
+// console.log(calcFibArray({}));
 
 console.log(calcFibArray(0));
 console.log(calcFibArray(1));
