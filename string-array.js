@@ -20,7 +20,7 @@ function strCompare(stringArr) {
     for (let index=0; index < stringArr.length-1; index++)
       arr.push(compare(stringArr[index], stringArr[index  +1]))
     return arr
-  } else {
+  } else {  
     return []
   }
 }

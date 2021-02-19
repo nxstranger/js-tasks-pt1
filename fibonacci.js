@@ -3,30 +3,39 @@
 // На вход функции подавать длину конечного массива чисел.
 // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610...
 
-function fibArr(fibLength, bigvalues=false) {
+function fibArr(fibLength) {
 //  fibLength: Ingerer - required length of array
 //  bigvalues: Boolean - trigger for run with values > 37
 //  return array of Fibonacci numbers
-  let arr = []
+  let arr = [0, 1]
+
   if (typeof(fibLength) != 'number' || fibLength < 0){
     return "Input error!"
   }
-  if (fibLength > 37 && !bigvalues) return 'big value, limit 37'
+  
   function fib(index){
     if (typeof(index) != 'number' || index < 0){
       return "Input error!"
     }
     if (index == 0 || index == 1) {
-      return index == 0 ? 0 : 1
+      return arr.slice(0, index)
     }
     else {
-      return (fib(index - 1) + fib(index - 2))
+      let counter = 2
+      while (counter <= index){
+        arr.push( arr[counter - 1] + arr[counter - 2])
+        counter++
+      }
+    return arr
     }
   }
-  for (let x = 0; x < fibLength; x++){
-    arr.push(fib(x))
-  }
-  return arr
+
+
+  // for (let x = 0; x < fibLength; x++){
+  //   arr.push(fib(x))
+  // }
+
+  return fib(fibLength)
 }
 
 // console.log(fibArr(""))
